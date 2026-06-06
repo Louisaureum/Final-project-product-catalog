@@ -1,9 +1,11 @@
 import ProductList from '../components/ProductList'
 
-function HomePage() {
+function Home() {
     return (
         <div>
             <ProductList />
         </div>
     )
 }
+
+export default Home;

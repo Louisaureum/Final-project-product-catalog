@@ -1,6 +1,8 @@
+import ProductForm from '../components/ProductForm';
+
 function AddProduct(){
     return(
-        <p>Placeholder for AddProduct Form</p>
+        <ProductForm/>
     )
 }
 

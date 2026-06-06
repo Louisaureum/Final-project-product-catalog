@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router';
+import {Routes, Route, Link } from 'react-router';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import AddProduct from './pages/AddProduct';
@@ -9,7 +9,6 @@ function App() {
     return (
         <div>
             <Navbar />
-
             <Routes>
                 {/* 1. Home / Product List*/}
                 <Route path="/" element={<Home />} />

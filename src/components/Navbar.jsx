@@ -1,9 +1,15 @@
-function Navbar(){
-     {/* Navigation bar at the top of every page */}
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/add-product">Add Product</Link>
-      </nav>
+import { Link } from 'react-router';
+
+function Navbar() {
+    return (
+        <div>
+            <nav style={{ display: 'flex', gap: '12px', paddingBottom: '15px' }}>
+                <button><Link to="/">Home</Link></button>
+                <button><Link to="/add-product">Add Product</Link></button>
+            </nav>
+        </div>
+    );
 }
 
 export default Navbar;
+

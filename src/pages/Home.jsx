@@ -1,0 +1,9 @@
+import ProductList from '../components/ProductList'
+
+function HomePage() {
+    return (
+        <div>
+            <ProductList />
+        </div>
+    )
+}

@@ -4,3 +4,5 @@ function Navbar({ title = 'Product Catalog' }) {
       <div className="navbar-brand">{title}</div>
       <ul className="navbar-links">
         <li><a href="/">Home</a></li>
+        <li><a href="/add-product">Add Product</a></li>
+      </ul>

@@ -8,3 +8,5 @@ function Navbar({ title = 'Product Catalog' }) {
       </ul>
     </nav>
   )
+}
+export default Navbar

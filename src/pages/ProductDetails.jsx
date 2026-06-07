@@ -1,35 +1,14 @@
+import { useParams } from "rimport { useParams } from "react-router-dom";
+
 function ProductDetails() {
+  const { id } = useParams();
+
   return (
-    <div className="details-page">
-      <div className="details-container">
-
-        <div className="details-image">
-          <img
-            src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab"
-            alt="phone"
-          />
-        </div>
-
-        <div className="details-info">
-          <span className="product-badge">
-            Premium Smartphone
-          </span>
-
-          <h1>iPhone 16 Pro</h1>
-
-          <h2>$1599</h2>
-
-          <p>
-            Experience flagship performance,
-            incredible battery life and
-            industry-leading cameras.
-          </p>
-
-          <button className="buy-btn">
-            Add To Cart
-          </button>
-        </div>
-
+    <div className="page">
+      <div className="card">
+        <h1>ClickHaus Product ✨</h1>
+        <p>Product ID: {id}</p>
+        <p>This page will later show full product info.</p>
       </div>
     </div>
   );

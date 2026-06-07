@@ -1,32 +1,19 @@
-function ProductCard({ product }) {
-  const { title, description, author, category, status, image } = product || {}
+import { Link }import { Link } from "react-router-dom";
 
+function ProductCard({ product }) {
   return (
-    <article className="product-card">
-      {image && (
-        <img
-          src={image}
-          alt={title || 'Product image'}
-          className="product-card-image"
-        />
-      )}
-      <div className="product-card-content">
-        <h3>{title || 'Untitled product'}</h3>
-        {(author || category || status) && (
-          <div className="product-card-meta">
-            {author && <span>{author}</span>}
-            {category && <span>{category}</span>}
-            {status && <span>{status}</span>}
-          </div>
-        )}
-        {description ? (
-          <p>{description}</p>
-        ) : (
-          <p className="product-card-placeholder">No description available.</p>
-        )}
-      </div>
-    </article>
-  )
+    <div className="card">
+      <img src={product.image} className="img" />
+
+      <h3>{product.name}</h3>
+      <p>{product.description}</p>
+      <p>${product.price}</p>
+
+      <Link to={`/product/${product.id}`} className="btn">
+        View Details
+      </Link>
+    </div>
+  );
 }
 
-export default ProductCard
+export default ProductCard;

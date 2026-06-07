@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -7,6 +8,15 @@ body {
 
 /* NAVBAR */
 nav {
+=======
+/* Navbar Styles */
+.navbar {
+  background: rgba(8, 15, 32, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  padding: 1rem 2rem;
+>>>>>>> 0cd1e1856d6caf0f248998f3af0c63b554bdceac
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,6 +28,7 @@ nav {
 
   position: sticky;
   top: 0;
+<<<<<<< HEAD
   z-index: 1000;
 }
 
@@ -30,11 +41,26 @@ nav h1 {
 nav a {
   margin-left: 18px;
   color: white;
+=======
+  z-index: 100;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+>>>>>>> 0cd1e1856d6caf0f248998f3af0c63b554bdceac
   text-decoration: none;
   opacity: 0.8;
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
 nav a:hover {
   opacity: 1;
   color: #38bdf8;
@@ -50,6 +76,86 @@ nav a:hover {
 .container {
   width: 100%;
   max-width: 1100px;
+=======
+.voltify-logo .voltify-glow {
+  background: linear-gradient(135deg, #00d4ff, #4f8bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.35), 0 0 40px rgba(79, 139, 255, 0.25);
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.55));
+  animation: voltify-glow 2.5s ease-in-out infinite;
+  font-weight: 900;
+}
+
+@keyframes voltify-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.8)) drop-shadow(0 0 24px rgba(79, 139, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 24px rgba(0, 212, 255, 1)) drop-shadow(0 0 50px rgba(79, 139, 255, 0.7));
+  }
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar-links li a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #4f8bff);
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus-visible {
+  color: #e8f7ff;
+  transform: translateY(-1px);
+  background: rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.18);
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a:focus-visible::after {
+  width: 70%;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.25rem;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+  }
+>>>>>>> 0cd1e1856d6caf0f248998f3af0c63b554bdceac
 }
 
 h1 {

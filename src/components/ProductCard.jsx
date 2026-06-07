@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
-  const { title, description, author, category, status, image } = product || {}
+  const { name, description, price, category, status, image } = product || {}
 
   return (
     <article className="product-card">
       {image && (
         <img
           src={image}
-          alt={title || 'Product image'}
+          alt={name || 'Product image'}
           className="product-card-image"
+          style={{ width: "220px", height: "250px" }}
         />
       )}
       <div className="product-card-content">
-        <h3>{title || 'Untitled product'}</h3>
-        {(author || category || status) && (
+        <h3>{name || 'Unnamed product'}</h3>
+        {(price || category || status) && (
           <div className="product-card-meta">
-            {author && <span>{author}</span>}
+            {price && <span>{price}</span>}
             {category && <span>{category}</span>}
             {status && <span>{status}</span>}
           </div>

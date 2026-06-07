@@ -1,11 +1,12 @@
-import ProductList from '../components/ProductList'
+import ProductList from '../components/ProductList';
+import { products } from '../data/products';
 
 function Home() {
-    return (
-        <div>
-            <ProductList />
-        </div>
-    )
+  return (
+    <div>
+      <ProductList products={products} />
+    </div>
+  );
 }
 
 export default Home;

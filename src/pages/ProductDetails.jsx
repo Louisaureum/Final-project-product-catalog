@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 function ProductDetails() {
     const { id } = useParams();

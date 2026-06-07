@@ -9,12 +9,17 @@ import ProductDetails from './pages/ProductDetails';
 
 import './App.css';
 
-// Importing the pre-made service functions
+// Importing service functions
 import { getProducts, createProduct, deleteProduct } from './services/productService';
 
+// 1. Importing filtering functions
+import { filterByCategory, filterByStatus } from './utils/filters';
 
 function App() {
     const [products, setProducts] = useState([]);
+
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedStatus, setSelectedStatus] = useState('');
 
     useEffect(() => {
         syncProductsWithService();
@@ -45,12 +50,23 @@ function App() {
         });
     };
 
+
+    let visibleProducts = filterByCategory(products, selectedCategory);
+    visibleProducts = filterByStatus(visibleProducts, selectedStatus);
+
     return (
         <div>
             <Navbar />
             <Routes>
                 {/* 1. Home / Product List*/}
-                <Route path="/" element={<Home products={products} onDelete={handleDeleteProduct} />} />
+                <Route path="/" element={<Home
+                    products={visibleProducts}
+                    onDelete={handleDeleteProduct}
+                    selectedCategory={selectedCategory}
+                    setSelectedCategory={setSelectedCategory}
+                    selectedStatus={selectedStatus}
+                    setSelectedStatus={setSelectedStatus} />}
+                />
 
                 {/* 2. Form page to add a product */}
                 <Route path="/add-product" element={<AddProduct onAddProduct={handleAddProduct} />} />

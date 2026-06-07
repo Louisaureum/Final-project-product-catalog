@@ -12,6 +12,7 @@ import './App.css';
 // Importing the pre-made service functions
 import { getProducts, createProduct, deleteProduct } from './services/productService';
 
+
 function App() {
     const [products, setProducts] = useState([]);
 
@@ -33,8 +34,13 @@ function App() {
             id: maxId + 1,
         };
 
-
         createProduct(finalizedProduct).then(() => {
+            syncProductsWithService();
+        });
+    };
+
+    const handleDeleteProduct = (productId) => {
+        deleteProduct(productId).then(() => {
             syncProductsWithService();
         });
     };
@@ -44,7 +50,7 @@ function App() {
             <Navbar />
             <Routes>
                 {/* 1. Home / Product List*/}
-                <Route path="/" element={<Home products={products}/>} />
+                <Route path="/" element={<Home products={products} onDelete={handleDeleteProduct} />} />
 
                 {/* 2. Form page to add a product */}
                 <Route path="/add-product" element={<AddProduct onAddProduct={handleAddProduct} />} />

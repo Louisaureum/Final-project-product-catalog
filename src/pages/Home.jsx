@@ -1,9 +1,9 @@
 import ProductList from '../components/ProductList';
 
-function Home({products}) {
+function Home({products, onDelete}) {
   return (
     <div>
-      <ProductList products={products} />
+      <ProductList products={products} onDelete= {onDelete}/>
     </div>
   );
 }

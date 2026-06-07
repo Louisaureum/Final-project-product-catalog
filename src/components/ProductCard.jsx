@@ -17,9 +17,9 @@ function ProductCard({ product }) {
         <h3>{name || 'Unnamed product'}</h3>
         {(price || category || status) && (
           <div className="product-card-meta">
-            {price && <span>{price}</span>}
-            {category && <span>{category}</span>}
-            {status && <span>{status}</span>}
+            {price && <span>Price: {price}</span>}
+            {category && <span>Category: {category}</span>}
+            {status && <span>Status: {status}</span>}
           </div>
         )}
         {description ? (

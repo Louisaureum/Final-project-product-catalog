@@ -1,8 +1,8 @@
 import ProductForm from '../components/ProductForm';
 
-function AddProduct(){
+function AddProduct({onAddProduct}){
     return(
-        <ProductForm/>
+        <ProductForm onAddProduct={onAddProduct}/>
     )
 }
 

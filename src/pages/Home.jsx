@@ -1,7 +1,6 @@
 import ProductList from '../components/ProductList';
-import { products } from '../data/products';
 
-function Home() {
+function Home({products}) {
   return (
     <div>
       <ProductList products={products} />

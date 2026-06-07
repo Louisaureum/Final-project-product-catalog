@@ -10,7 +10,7 @@ function ProductCard({ product }) {
           src={image}
           alt={name || 'Product image'}
           className="product-card-image"
-          style={{ width: "220px", height: "250px" }}
+           
         />
       )}
       <div className="product-card-content">

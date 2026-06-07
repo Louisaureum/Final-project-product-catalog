@@ -1,4 +1,4 @@
-fimport ProductCard from "../components/ProductCard.jsx";
+import ProductCard from "../components/ProductCard.jsx";
 
 const products = [
   {

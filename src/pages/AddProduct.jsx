@@ -1,4 +1,4 @@
-import { useSimport { useState } from "react";
+import { useState } from "react";
 
 function AddProduct() {
   const [form, setForm] = useState({

@@ -1,8 +1,10 @@
 import ProductList from '../components/ProductList';
 import FilterBar from '../components/ProductFilter';
+
 function Home({
   products,
   onDelete,
+  onUpdateStatus,
   selectedCategory,
   setSelectedCategory,
   selectedStatus,
@@ -10,7 +12,6 @@ function Home({
   searchTerm,
   setSearchTerm,
 }) {
-
   return (
     <section className="page-panel home-page">
       <div className="page-heading">
@@ -27,7 +28,7 @@ function Home({
         setSearchTerm={setSearchTerm}
       />
 
-      <ProductList products={products} onDelete={onDelete} />
+      <ProductList products={products} onDelete={onDelete} onUpdateStatus={onUpdateStatus} />
     </section>
   );
 }

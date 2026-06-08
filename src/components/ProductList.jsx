@@ -1,6 +1,6 @@
 import ProductCard from './ProductCard'
 
-function ProductList({ products = [] , onDelete}) {
+function ProductList({ products = [] , onDelete, onUpdateStatus}) {
   if (!products || products.length === 0) {
     return <div className="product-grid empty-state">No products available yet.</div>
   }
@@ -8,7 +8,7 @@ function ProductList({ products = [] , onDelete}) {
   return (
     <section className="product-grid">
       {products.map((product, index) => (
-        <ProductCard key={product.id ?? index} product={product} onDelete={onDelete}/>
+        <ProductCard key={product.id ?? index} product={product} onDelete={onDelete} onUpdateStatus={onUpdateStatus}/>
       ))}
     </section>
   )

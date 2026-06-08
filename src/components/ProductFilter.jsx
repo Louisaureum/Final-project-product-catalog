@@ -28,7 +28,6 @@ function FilterBar({
         >
           <option value="">All Categories</option>
           <option value="Electronics">Electronics</option>
-          <option value="Sports">Sports</option>
           <option value="Home">Home</option>
           <option value="Fashion">Fashion</option>
           <option value="Books">Books</option>

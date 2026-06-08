@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   overscroll-behavior-y: contain;
-  background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.15), transparent 24%),
+  background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.14), transparent 24%),
     radial-gradient(circle at bottom right, rgba(255, 168, 64, 0.12), transparent 20%),
     linear-gradient(180deg, #04050a 0%, #0b1224 40%, #090c17 100%);
   color: #ecf4ff;

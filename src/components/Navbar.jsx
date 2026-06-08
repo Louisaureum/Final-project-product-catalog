@@ -1,16 +1,32 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 function Navbar() {
-    return (
-        <div className="navbar-brand voltify-logo">
-            <nav style={{ display: 'flex', gap: '12px', paddingBottom: '15px' }}>
-                <span className="voltify-glow">⚡Voltify⚡</span>
-
-                <button className='navbar-links'><Link to="/">Home</Link></button>
-                <button className='navbar-links'><Link to="/add-product">Add Product</Link></button>
-            </nav>
-        </div>
-    );
+  return (
+    <nav className="navbar">
+      <div className="navbar-brand voltify-logo">
+        <span className="voltify-glow">⚡Voltify⚡</span>
+      </div>
+      <ul className="navbar-links">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? 'nav-btn active' : 'nav-btn')}
+            end
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/add-product"
+            className={({ isActive }) => (isActive ? 'nav-btn active' : 'nav-btn')}
+          >
+            Add Product
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  )
 }
 
 export default Navbar;

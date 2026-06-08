@@ -1,0 +1,11 @@
+/* --- Global Body Layout --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url('https://img.magnific.com/free-vector/blue-gradient-technology-background_23-2149112673.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}

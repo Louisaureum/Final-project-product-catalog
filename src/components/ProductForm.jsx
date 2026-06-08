@@ -7,9 +7,9 @@ function ProductForm({ onAddProduct }) {
   // A single state object keeps form management clean
   const [formData, setFormData] = useState({
     name: '',
-    category: 'Electronics', 
+    category: 'Electronics',
     price: '',
-    status: 'In Stock',     
+    status: 'In Stock',
     image: '',
     description: '',
   });
@@ -23,60 +23,60 @@ function ProductForm({ onAddProduct }) {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!formData.name || !formData.category || !formData.price || !formData.status) return;
-
-  onAddProduct(formData); 
-  navigate('/'); // Navigate back home after submission
-};
+    if (!formData.name || !formData.category || !formData.price || !formData.status) return;
+    alert("Product submitted ✨");
+    onAddProduct(formData);
+    navigate('/'); // Navigate back home after submission
+  };
 
   return (
-    <div>
-      <h3>Add New Product</h3>
-      <form onSubmit={handleSubmit}>
-        
-        <div>
-          <label >Product Name:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange}/>
+    <div className="form-wrapper">
+      <h3 className="form-title">Add New Product</h3>
+      <form onSubmit={handleSubmit} className="product-form">
+
+        <div className="form-group">
+          <label>Product Name:</label>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Category:</label>
-          <select name="category" value={formData.category} onChange={handleChange}>
-            <option value="Electronics">Electronics</option>
-            <option value="Sports">Sports</option>
+          <select name="category" value={formData.category} onChange={handleChange} required >
             <option value="Home">Home</option>
-             <option value="Fashion">Fashion</option>
-              <option value="Books">Books</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Books">Books</option>
           </select>
         </div>
 
-        <div>
-          <label >Price(Ksh):</label>
-          <input type="number" name="price" value={formData.price} onChange={handleChange} />
+        <div className="form-group">
+          <label>Price ($):</label>
+          <input type="number" name="price" value={formData.price} onChange={handleChange} required />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Stock Status:</label>
-          <select name="status" value={formData.status} onChange={handleChange}>
+          <select name="status" value={formData.status} onChange={handleChange} required>
             <option value="In Stock">In Stock</option>
             <option value="Low Stock">Low Stock</option>
             <option value="Out of Stock">Out of Stock</option>
           </select>
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Image URL:</label>
-          <input type="url" name="image" value={formData.image} onChange={handleChange} placeholder="https://images.vexels.com/media/users/3/146452/isolated/preview/ff1dff030e21fb04a43b2303f3d75ec2-open-cardboard-box-icon.png?w=360" />
+          <input type="url" name="image" value={formData.image} onChange={handleChange} placeholder="https://img.magnific.com/free-vector/sticker-empty-box-opened-white-background_1308-68243.jpg?semt=ais_hybrid&w=740&q=80" />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Description:</label>
-          <textarea name="description" value={formData.description} onChange={handleChange} rows="4"/>
+          <textarea name="description" value={formData.description} onChange={handleChange} rows="4" />
         </div>
 
-        <button type="submit">Add Product</button>
+        <button type="submit" className="form-submit-btn">
+          Add Product
+        </button>
       </form>
     </div>
   );

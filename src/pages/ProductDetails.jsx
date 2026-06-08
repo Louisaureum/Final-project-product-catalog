@@ -1,14 +1,17 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function ProductDetails() {
-    const { id } = useParams();
-    return (
-        <div className="product-details-page">
-            <h2>Product Details</h2>
-            <p>Now showing details for Product ID: {id}</p>
-            {/*use this 'id' to fetch data for a specific item*/}
-        </div>
-    );
+  const { id } = useParams();
+
+  return (
+    <div className="page">
+      <div className="card">
+        <h1>ClickHaus Product ✨</h1>
+        <p>Product ID: {id}</p>
+        <p>This page will later show full product info.</p>
+      </div>
+    </div>
+  );
 }
 
 export default ProductDetails;

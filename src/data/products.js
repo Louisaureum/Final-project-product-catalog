@@ -2,20 +2,21 @@ export const products = [
   {
     id: 1,
     name: "Wireless Headphones",
-    category: "Electronics",
+    category: "Fashion",
     price: 45,
     status: "In Stock",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
     description: "Comfortable wireless headphones with long battery life."
   },
   {
-    id: 2,
-    name: "Running Shoes",
-    category: "Sports",
-    price: 60,
-    status: "Low Stock",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-    description: "Lightweight running shoes designed for comfort and speed."
+   id: 2,
+    name: 'Voltify Smart Speaker',
+    category: 'Electronics',
+    price: 129.99,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFH8xFk184BxHw7ZtO9zSSCxNJjv-beLa8Cg&s',
+    stockStatus: 'In Stock',
+    description:
+      'A premium smart speaker with immersive sound, voice control, and Bluetooth connectivity for modern homes.',
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ export const products = [
   {
     id: 4,
     name: "Smart Watch",
-    category: "Electronics",
+    category: "Fashion",
     price: 120,
     status: "In Stock",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
@@ -53,35 +54,18 @@ export const products = [
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
     description: "Durable backpack suitable for travel, school, and work."
   },
+  
   {
     id: 7,
-    name: "Novel Collection",
-    category: "Books",
-    price: 25,
-    status: "Low Stock",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
-    description: "A collection of bestselling novels from various genres."
-  },
-  {
-    id: 8,
-    name: "Yoga Mat",
-    category: "Sports",
-    price: 20,
-    status: "In Stock",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a",
-    description: "Non-slip yoga mat ideal for home and studio workouts."
-  },
-  {
-    id: 9,
     name: "Desk Lamp",
     category: "Home",
     price: 30,
-    status: "Out of Stock",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+    status: 'Low Stock',
+    image: 'https://img.kilimall.com/c/obs/seller/100011235/goods_image/260214164535_def7564e10b7ceaa6d89f2f1c1c51648.jpg',
     description: "Modern LED desk lamp with adjustable brightness."
   },
   {
-    id: 10,
+    id: 8,
     name: "Bluetooth Speaker",
     category: "Electronics",
     price: 55,
@@ -89,49 +73,56 @@ export const products = [
     image: "https://images.unsplash.com/photo-1589003077984-894e133dabab",
     description: "Portable Bluetooth speaker with excellent sound quality."
   },
+
   {
-    id: 11,
-    name: "Leather Jacket",
-    category: "Fashion",
-    price: 95,
-    status: "Low Stock",
-    image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234",
-    description: "Stylish leather jacket for casual and formal wear."
-  },
-  {
-    id: 12,
-    name: "Cookware Set",
-    category: "Home",
-    price: 110,
-    status: "In Stock",
-    image: "https://images.unsplash.com/photo-1584990347449-a0b3c2c26e70",
-    description: "Premium cookware set for everyday cooking."
-  },
-  {
-    id: 13,
-    name: "Football",
-    category: "Sports",
-    price: 18,
-    status: "In Stock",
-    image: "https://images.unsplash.com/photo-1508098682722-e99c643e7485",
-    description: "Professional-quality football for training and matches."
-  },
-  {
-    id: 14,
+    id: 9,
     name: "Programming Fundamentals",
     category: "Books",
     price: 35,
     status: "Out of Stock",
-    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Y5V5I4wQGv6dV1zjIxkb-Fm97rSBAQ8cCQ&s",
     description: "Beginner-friendly guide to programming concepts."
   },
   {
-    id: 15,
-    name: "Sunglasses",
+    id: 10,
+    name: "Smart glasses",
     category: "Fashion",
     price: 22,
     status: "In Stock",
-    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDTxu7KOThbH7Lnme1ToZgdnkySGSGAfSlHw&s",
     description: "UV-protected sunglasses with a modern design."
-  }
+  },
+
+  {
+    id: 11,
+    name: 'Voltify Power Bank',
+    category: 'Electronics',
+    price: 49.99,
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSZSZb6CTgsWOxS6eBv6YnjGryReGI_ry_XM0lihZjo0I-Zy0KTHgrY48-UuRyPYUjM7XGnYNpN2lrjMEr73yWa3B4PlOdbwGstl9UvK_PKSptnjO8-dJr8EwXw3cOvEb5mUUh-QhM&usqp=CAc',
+    status: 'Low Stock',
+    description:
+      'Stay charged on the go with a compact power bank that delivers fast charging for phones and tablets.',
+  },
+  {
+    id: 12,
+    name: 'Voltify Noise-Cancelling Headphones',
+    category: 'Fashion',
+    price: 199.99,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcJ_HXQdCzqdQ7znxTirbJrb1tVIk-Jxf2g&s',
+    status: 'Out of Stock',
+    description:
+      'Wireless noise-cancelling headphones with long battery life and studio-quality sound for travel and work.',
+  },
+  {
+    id: 13,
+    name: 'Voltify Fitness Tracker',
+    category: 'Fashion',
+    price: 79.99,
+    image:
+      'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=900&q=80',
+    status: 'In Stock',
+    description:
+      'A sleek fitness tracker that monitors workouts, sleep, and health goals with a responsive OLED display.',
+  },
 ];

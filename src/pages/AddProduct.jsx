@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import { useState } from "react";
-=======
 import { useState } from 'react'
->>>>>>> Stashed changes
 
 function AddProduct({ onAddProduct }) {
   const [form, setForm] = useState({

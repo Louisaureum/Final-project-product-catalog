@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import ProductCard from "../components/ProductCard.jsx";
-=======
 import ProductCard from '../components/ProductCard.jsx'
->>>>>>> Stashed changes
 
 function Home({ products = [] }) {
   return (

@@ -1,16 +1,49 @@
-# React + Vite
+# Product Catalogue: Voltify Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+`Product Catalogue: Voltify Shopping App` is a modern product catalog web application built with React and Vite. It allows users to browse and filter products through a clean, responsive interface while demonstrating core frontend development skills such as routing, component rendering, API integration, and debugging.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse a product catalogue with visual product cards
+- Filter products by categories and search criteria
+- View detailed information for each product
+- Add new products through a product form interface
+- Responsive layout for desktop and mobile devices
+- Clean navigation across pages using client-side routing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Run the Project
 
-## Expanding the ESLint configuration
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open the app in your browser at the local development URL shown in the terminal.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- Source framework: React
+- Build tool: Vite
+- Languages: JavaScript, JSX, CSS
+- Package manager: npm
+- Project files:
+  - `src/` for application components and pages
+  - `public/` for static assets
+  - `package.json` for scripts and dependencies
+
+## Collaborators
+
+1. Gathigia Muraguri - UI / Designing
+2. Ziza Kariuki - Routing
+3. Weignstone Lukoye - Component Rendering
+4. Simon Gakuru - API Lead
+5. Louis Kiptoo - Testing and Debugging Lead
+
+## License
+
+This project is licensed under the MIT License.

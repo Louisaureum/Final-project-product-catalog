@@ -44,9 +44,11 @@ function ProductForm({ onAddProduct }) {
         <div className="form-group">
           <label>Category:</label>
           <select name="category" value={formData.category} onChange={handleChange} required >
-            <option value="Home">Home</option>
+            <option value="Electronics">Electronics</option>
+           <option value="Home">Home</option>
             <option value="Fashion">Fashion</option>
             <option value="Books">Books</option>
+           
           </select>
         </div>
 

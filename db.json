@@ -2,12 +2,57 @@
   "Products": [
     {
       "id": "1",
-      "title": "",
-      "description": "",
-      "author": "",
-      "category": "",
-      "status": "",
-      "image": ""
+      "title": "Alpine Trail Running Shoes",
+      "description": "Lightweight trail shoes with superior grip and breathable mesh for all-day comfort.",
+      "author": "Peak Performance",
+      "category": "Footwear",
+      "status": "In Stock",
+      "image": "https://example.com/images/trail-shoes.jpg"
+    },
+    {
+      "id": "2",
+      "title": "EcoBlend Reusable Water Bottle",
+      "description": "Stainless steel bottle with leakproof lid and double-wall insulation to keep drinks cold or hot.",
+      "author": "GreenGear",
+      "category": "Accessories",
+      "status": "In Stock",
+      "image": "https://example.com/images/water-bottle.jpg"
+    },
+    {
+      "id": "3",
+      "title": "StudioPro Wireless Headphones",
+      "description": "Noise-canceling Bluetooth headphones with 30-hour battery life and premium sound quality.",
+      "author": "SoundLab",
+      "category": "Electronics",
+      "status": "Backordered",
+      "image": "https://example.com/images/headphones.jpg"
+    },
+    {
+      "id": "4",
+      "title": "ComfortFlex Yoga Mat",
+      "description": "Eco-friendly, non-slip yoga mat with extra cushioning for stability and joint support.",
+      "author": "ZenMotion",
+      "category": "Fitness",
+      "status": "In Stock",
+      "image": "https://example.com/images/yoga-mat.jpg"
+    },
+    {
+      "id": "5",
+      "title": "ModernHome Smart Lamp",
+      "description": "Wi-Fi enabled desk lamp with adjustable colors, touch controls, and voice assistant support.",
+      "author": "BrightNest",
+      "category": "Home",
+      "status": "Limited Stock",
+      "image": "https://example.com/images/smart-lamp.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Traveler’s Packable Backpack",
+      "description": "Durable, water-resistant backpack that folds flat for easy storage and travel convenience.",
+      "author": "RoamReady",
+      "category": "Travel",
+      "status": "In Stock",
+      "image": "https://example.com/images/backpack.jpg"
     }
-]
+  ]
 }

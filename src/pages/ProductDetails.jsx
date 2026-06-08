@@ -6,18 +6,19 @@ function ProductDetails({ products = [], onUpdateStock, onDelete }) {
   const navigate = useNavigate()
   const productId = Number(id)
 
-  // try numeric id first, fallback to string match
   const product = products.find((p) => p.id === productId) || products.find((p) => String(p.id) === id)
 
   if (!product) {
     return (
       <div className="page">
         <div className="container">
-          <h2>Product not found</h2>
-          <p>The product you're looking for does not exist.</p>
-          <Link to="/" className="btn">
-            Back to products
-          </Link>
+          <div className="card details-card">
+            <h2>Product not found</h2>
+            <p>The product you're looking for does not exist.</p>
+            <Link to="/" className="btn" style={{ marginTop: 16 }}>
+              Back to products
+            </Link>
+          </div>
         </div>
       </div>
     )
@@ -42,48 +43,59 @@ function ProductDetails({ products = [], onUpdateStock, onDelete }) {
   return (
     <div className="page">
       <div className="container">
-        <Link to="/" className="btn" style={{ marginBottom: 12 }}>
-          ← Back
-        </Link>
-
-        <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start' }}>
-          <div style={{ flex: '0 0 380px' }}>
-            <img
-              src={product.image}
-              alt={product.name}
-              style={{ width: '100%', borderRadius: 12 }}
-            />
+        <div className="details-hero">
+          <div>
+            <Link to="/" className="btn back-btn">
+              ← Back to catalog
+            </Link>
+            <div className="product-badge">
+              <span>{product.category || 'General'}</span>
+              <span className={statusFromProduct.replace(/\s+/g, '-').toLowerCase()}>
+                {statusFromProduct}
+              </span>
+            </div>
+            <h1>{product.name}</h1>
+            <p className="details-summary">{product.description}</p>
+            <div className="details-actions">
+              <strong className="price-tag">${product.price}</strong>
+              <div className="details-buttons">
+                <button className="btn" onClick={handleToggleStock}>
+                  Mark as {nextStatus}
+                </button>
+                <button className="btn delete-btn" onClick={handleDelete}>
+                  Delete product
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div style={{ flex: 1 }}>
-            <h1 style={{ marginTop: 0 }}>{product.name}</h1>
+          <div className="details-image-wrap">
+            <img src={product.image} alt={product.name} className="details-image" />
+          </div>
+        </div>
 
-            {product.category && (
-              <p style={{ margin: '8px 0', color: '#64748b' }}>{product.category}</p>
-            )}
-
-            <p style={{ fontSize: 20, fontWeight: '700', color: '#0ea5e9' }}>
-              ${product.price}
-            </p>
-
-            <p style={{ margin: '12px 0' }}>{product.description}</p>
-
-            <p>
-              <strong>Status:</strong> {statusFromProduct}
-            </p>
-
-            <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
-              <button className="btn" onClick={handleToggleStock}>
-                Change stock to "{nextStatus}"
-              </button>
-
-              <button
-                className="btn"
-                onClick={handleDelete}
-                style={{ background: '#ef4444', borderColor: '#ef4444' }}
-              >
-                Delete product
-              </button>
+        <div className="details-card">
+          <h2>Product details</h2>
+          <div className="details-grid">
+            <div>
+              <p className="detail-label">Product ID</p>
+              <p>{product.id}</p>
+            </div>
+            <div>
+              <p className="detail-label">Category</p>
+              <p>{product.category || 'General'}</p>
+            </div>
+            <div>
+              <p className="detail-label">Price</p>
+              <p>${product.price}</p>
+            </div>
+            <div>
+              <p className="detail-label">Stock status</p>
+              <p>{statusFromProduct}</p>
+            </div>
+            <div className="details-full">
+              <p className="detail-label">Description</p>
+              <p>{product.description}</p>
             </div>
           </div>
         </div>

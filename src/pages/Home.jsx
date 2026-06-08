@@ -1,4 +1,4 @@
-import ProductCard from '../components/ProductCard.jsx'
+import ProductList from '../components/ProductList'
 
 function Home({ products = [] }) {
   return (
@@ -9,15 +9,7 @@ function Home({ products = [] }) {
           {products.length} products available
         </p>
 
-        {products.length ? (
-          <div className="grid">
-            {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
-        ) : (
-          <p className="empty-state">No products available right now.</p>
-        )}
+        <ProductList products={products} />
       </div>
     </div>
   )

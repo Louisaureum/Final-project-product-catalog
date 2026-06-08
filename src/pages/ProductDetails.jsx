@@ -15,8 +15,8 @@ function ProductDetails({ products = [], onUpdateStock, onDelete }) {
           <div className="card details-card">
             <h2>Product not found</h2>
             <p>The product you're looking for does not exist.</p>
-            <Link to="/" className="btn" style={{ marginTop: 16 }}>
-              Back to products
+            <Link to="/" className="btn">
+              Back to catalog
             </Link>
           </div>
         </div>

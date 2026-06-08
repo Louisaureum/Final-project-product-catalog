@@ -4,6 +4,9 @@
 
 `Product Catalogue: Voltify Shopping App` is a modern product catalog web application built with React and Vite. It allows users to browse and filter products through a clean, responsive interface while demonstrating core frontend development skills such as routing, component rendering, API integration, and debugging.
 
+<img width="949" height="441" alt="Product Catalog Application Homepage Screenshot" src="https://github.com/user-attachments/assets/1ddb305e-d268-494c-883f-d6832f63e2c0" />
+
+
 ## Features
 
 - Browse a product catalogue with visual product cards

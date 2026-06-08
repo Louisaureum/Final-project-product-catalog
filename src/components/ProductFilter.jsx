@@ -2,10 +2,23 @@ function FilterBar({
   selectedCategory, 
   setSelectedCategory, 
   selectedStatus, 
-  setSelectedStatus 
+  setSelectedStatus,
+  searchTerm,
+  setSearchTerm,
 }) {
   return (
     <div className="filter-bar">
+      <div className="filter-search">
+        <label htmlFor="search-input">Search:</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search products..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
       <div>
         <label htmlFor="category-select">Category:</label>
         <select 

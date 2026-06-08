@@ -24,3 +24,23 @@ export const filterByStatus = (
     }
   );
 };
+
+export const filterBySearch = (products, search) => {
+  if (!search || search.trim() === '') return products;
+
+  const normalized = search.toLowerCase().trim();
+
+  return products.filter((product) => {
+    if (!product) return false;
+
+    const name = String(product.name || '').toLowerCase();
+    const category = String(product.category || '').toLowerCase();
+    const description = String(product.description || '').toLowerCase();
+
+    return (
+      name.includes(normalized) ||
+      category.includes(normalized) ||
+      description.includes(normalized)
+    );
+  });
+};

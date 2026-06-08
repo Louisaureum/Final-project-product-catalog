@@ -15,10 +15,13 @@ function App() {
     const nextId = products.length ? Math.max(...products.map((product) => product.id)) + 1 : 1
     const formattedProduct = {
       id: nextId,
+      name: newProduct.name,
       title: newProduct.name,
-      ...newProduct,
+      category: newProduct.category || 'General',
       price: Number(newProduct.price),
+      image: newProduct.image,
       stockStatus: newProduct.stockStatus || 'In Stock',
+      description: newProduct.description,
     }
 
     setProducts((currentProducts) => [formattedProduct, ...currentProducts])
@@ -44,7 +47,7 @@ function App() {
           <Route path="/" element={<Home products={products} />} />
           <Route path="/add-product" element={<AddProduct onAddProduct={handleAddProduct} />} />
           <Route
-            path="/products/:id"
+            path="/product/:id"
             element={
               <ProductDetails
                 products={products}

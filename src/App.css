@@ -1,3 +1,28 @@
+<<<<<<< Updated upstream
+=======
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+>>>>>>> Stashed changes
 /* Navbar Styles */
 .navbar {
   background: rgba(8, 15, 32, 0.88);
@@ -8,12 +33,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
   position: sticky;
   top: 0;
   z-index: 100;
@@ -28,9 +47,12 @@
   font-weight: 900;
   letter-spacing: 0.05em;
   color: #fff;
+<<<<<<< Updated upstream
   text-decoration: none;
   opacity: 0.8;
   transition: 0.3s;
+=======
+>>>>>>> Stashed changes
 }
 
 .voltify-logo .voltify-glow {
@@ -99,6 +121,124 @@
   width: 70%;
 }
 
+main {
+  padding: 40px 20px 60px;
+}
+
+.page {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+h1,
+h2,
+p,
+input,
+textarea {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.form-card {
+  max-width: 600px;
+  width: 100%;
+}
+
+.details-card {
+  max-width: 720px;
+  width: 100%;
+}
+
+.empty-state {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  padding: 20px;
+}
+
 @media (max-width: 720px) {
   .navbar {
     flex-direction: column;
@@ -111,6 +251,7 @@
     gap: 0.75rem;
     margin-top: 0.85rem;
   }
+<<<<<<< Updated upstream
 }
 
 h1 {
@@ -171,6 +312,8 @@ h1 {
   text-decoration: none;
 
   transition: 0.3s;
+=======
+>>>>>>> Stashed changes
 }
 
 .btn:hover {

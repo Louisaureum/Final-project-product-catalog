@@ -81,7 +81,7 @@ function App() {
                 <Route path="/add-product" element={<AddProduct onAddProduct={handleAddProduct} />} />
 
                 {/* 3. Product Details Page*/}
-                <Route path="/products/:id" element={<ProductDetails products={visibleProducts}/>} />
+                <Route path="/product/:id" element={<ProductDetails products={products} onUpdateStock={handleUpdateStatus} onDelete={handleDeleteProduct}/>} />
             </Routes>
 
             <Footer />

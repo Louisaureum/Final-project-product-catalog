@@ -19,7 +19,7 @@ function Home({
       />
       <ProductList products={products} onDelete={onDelete} onUpdateStatus={onUpdateStatus}/>
     </div>
-  );
+  )
 }
 
 export default Home;

@@ -6,18 +6,29 @@ function Home({
   selectedCategory,
   setSelectedCategory,
   selectedStatus,
-  setSelectedStatus }) {
+  setSelectedStatus,
+  searchTerm,
+  setSearchTerm,
+}) {
 
   return (
-    <div>
+    <section className="page-panel home-page">
+      <div className="page-heading">
+        <h1>Browse Products</h1>
+        <p>Search, filter, and manage your product catalog instantly.</p>
+      </div>
+
       <FilterBar
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         selectedStatus={selectedStatus}
         setSelectedStatus={setSelectedStatus}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
       />
+
       <ProductList products={products} onDelete={onDelete} />
-    </div>
+    </section>
   );
 }
 

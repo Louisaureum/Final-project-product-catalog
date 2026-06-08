@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <div className="navbar-brand voltify-logo">
-            <nav style={{ display: 'flex', gap: '12px', paddingBottom: '15px' }}>
+        <header className="navbar">
+            <div className="navbar-brand voltify-logo">
                 <span className="voltify-glow">⚡Voltify⚡</span>
-
-                <button className='navbar-links'><Link to="/">Home</Link></button>
-                <button className='navbar-links'><Link to="/add-product">Add Product</Link></button>
+            </div>
+            <nav className="navbar-nav" aria-label="Primary navigation">
+                <Link className="navbar-link" to="/">Home</Link>
+                <Link className="navbar-link" to="/add-product">Add Product</Link>
             </nav>
-        </div>
+        </header>
     );
 }
 

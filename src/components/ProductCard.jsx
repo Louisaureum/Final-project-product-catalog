@@ -10,7 +10,8 @@ function ProductCard({ product , onDelete}) {
           src={image}
           alt={name || 'Product image'}
           className="product-card-image"
-           
+          loading="lazy"
+          decoding="async"
         />
       )}
       <div className="product-card-content">

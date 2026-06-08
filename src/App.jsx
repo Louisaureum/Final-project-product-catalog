@@ -31,6 +31,14 @@ function App() {
         });
     };
 
+    const handleUpdateStatus = (productId, newStatus) => {
+    setProducts(prevProducts =>
+      prevProducts.map(product =>
+        product.id === productId ? { ...product, status: newStatus } : product
+      )
+    );
+  };
+
     const handleAddProduct = (newProductData) => {
         const maxId = products.length > 0 ? Math.max(...products.map((p) => p.id)) : 0;
 
@@ -64,6 +72,7 @@ function App() {
                     onDelete={handleDeleteProduct}
                     selectedCategory={selectedCategory}
                     setSelectedCategory={setSelectedCategory}
+                    onUpdateStatus={handleUpdateStatus}
                     selectedStatus={selectedStatus}
                     setSelectedStatus={setSelectedStatus} />}
                 />
@@ -72,7 +81,7 @@ function App() {
                 <Route path="/add-product" element={<AddProduct onAddProduct={handleAddProduct} />} />
 
                 {/* 3. Product Details Page*/}
-                <Route path="/products/:id" element={<ProductDetails />} />
+                <Route path="/products/:id" element={<ProductDetails products={visibleProducts}/>} />
             </Routes>
 
             <Footer />

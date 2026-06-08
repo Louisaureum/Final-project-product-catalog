@@ -5,6 +5,7 @@ function Home({
   onDelete,
   selectedCategory,
   setSelectedCategory,
+  onUpdateStatus,
   selectedStatus,
   setSelectedStatus }) {
 
@@ -16,7 +17,7 @@ function Home({
         selectedStatus={selectedStatus}
         setSelectedStatus={setSelectedStatus}
       />
-      <ProductList products={products} onDelete={onDelete} />
+      <ProductList products={products} onDelete={onDelete} onUpdateStatus={onUpdateStatus}/>
     </div>
   );
 }

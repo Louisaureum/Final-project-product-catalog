@@ -1,65 +1,46 @@
 import { Link } from 'react-router-dom';
 
-function ProductCard({ product, onDelete }) {
+function ProductCard({ product, onDelete, onUpdateStatus }) {
   const { name, description, price, category, status, image } = product || {}
   return (
     <div className="card">
-      <div style={{ position: "relative" }}>
+      <div>
         <img
           src={product.image}
           alt={product.name}
-          className="img"
-        />
-
-        {/* subtle overlay glow */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            borderRadius: "12px",
-            background:
-              "linear-gradient(to top, rgba(0,0,0,0.4), transparent)",
-          }}
-        />
+          className="img" />
       </div>
 
-      <div style={{ paddingTop: "10px" }}>
-        <h3 style={{ margin: "8px 0" }}>{product.name}</h3>
+      <div >
+        <h3>{product.name}</h3>
+        <p >{product.description}</p>
+        <span>${product.price}</span>
 
-        <p style={{ fontSize: "13px", opacity: 0.8 }}>
-          {product.description}
-        </p>
+        <div className="card-status">
+          <label htmlFor={`status-${product.id}`}>Stock Status:</label>
+          <select
+            id={`status-${product.id}`}
+            value={product.status}
+           className={`status-selector ${(product.status?.toLowerCase() || 'in-stock').replace(/\s+/g, '-')}`}
+            onChange={(e) => onUpdateStatus(product.id, e.target.value)}>
+            <option value="In Stock">In Stock</option>
+            <option value="Low Stock">Low Stock</option>
+            <option value="Out of Stock">Out of Stock</option>
+          </select>
+        </div>
 
-          <p>Status: {product.status}</p>
-
-        <span style={{ fontWeight: "bold", color: "#8ee0f0" }}>
-          ${product.price}
-        </span>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: "10px",
-          }}
-        >
-
-
+        <div>
           <Link to={`/product/${product.id}`} className="btn">
             View Details
           </Link>
 
           <button
             className="btn"
-            onClick={() => onDelete(product.id)}
-          >
+            onClick={() => onDelete(product.id)}>
             Delete Item?
           </button>
         </div>
+
       </div>
     </div>
   );

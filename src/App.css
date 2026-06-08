@@ -492,3 +492,59 @@ h1 {
     justify-content: space-between;
   }
 }
+
+.card-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-status label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.status-selector {
+  padding: 0.35rem 1.5rem 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.75rem;
+}
+
+.status-selector.in-stock {
+  background-color: rgba(16, 185, 129, 0.445);
+  border: 1px solid rgba(16, 185, 129, 0.849);
+  color: #06d18d;
+}
+
+.status-selector.low-stock {
+  background-color: rgba(245, 159, 11, 0.265);
+  border: 1px solid rgba(245, 159, 11, 0.616);
+  color: #f59e0b;
+}
+
+.status-selector.out-of-stock {
+  background-color: rgba(239, 68, 68, 0.281);
+  border: 1px solid rgba(239, 68, 68, 0.735);
+  color: #ef4444;
+}
+
+
+.status-selector option {
+  background-color: #1e293b;
+  color: #ffffff;
+}
